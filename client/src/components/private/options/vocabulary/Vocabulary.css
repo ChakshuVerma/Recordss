@@ -1,0 +1,220 @@
+.vocabulary .container{
+    width: 100%;
+    padding: 0px 5px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.vocabulary .container .main-content{
+    width: 100%;
+    min-height: 81.5vh;
+    padding: 0px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.vocabulary .container .main-content .search-bar-container{
+    width: 90%;
+    padding: 5px 0px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.vocabulary .container .main-content .search-bar-container input{
+    padding: 10px;
+    background-color: #fff;
+    flex: 1;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+}
+.vocabulary .container .main-content .search-bar-container .icons{
+    height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    margin-left: 15px; 
+    display: inline;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.vocabulary .container .main-content .labels-container{
+    width: 90%;
+    padding: 17px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+}
+.vocabulary .container .main-content .labels-container h2#word-label-heading{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff;
+}
+.vocabulary .container .main-content .labels-container #add-label-icon{
+    height: 30px;
+    width: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.vocabulary .container .main-content .labels-container #close-icon{
+    position: absolute;
+    right: 5px;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+.vocabulary .container .main-content .labels-container #close-icon:hover{
+    transform: scale(1.2);
+}
+.vocabulary .container .main-content .labels-container span{
+    width: 100%;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.vocabulary .container .main-content .labels-container>span{
+    color: gray;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.vocabulary .container .main-content .labels-container ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+.vocabulary .container .main-content .labels-container ul li{
+    padding: 5px 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.vocabulary .container .main-content .labels-container button#delete-word-btn{
+    width: 100%;
+    color: #000;
+    padding: 2px 0px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #000;
+    outline: none;
+    transition: 0.5s all;
+}
+.vocabulary .container .main-content .labels-container button#delete-word-btn:hover{
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #fff;
+}
+.vocabulary .container .main-content .labels-container ul li.all-labels{
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s all;
+}
+.vocabulary .container .main-content .labels-container ul li.all-labels.unselected-labels:hover{
+    background-color: #000;
+    color: lightgreen;
+}
+.vocabulary .container .main-content .labels-container ul li.addable-labels{
+    filter: opacity(50%);
+    transition: 0.3s all;
+}
+.vocabulary .container .main-content .labels-container ul li.addable-labels:hover{
+    color: lightgreen;
+}
+.vocabulary .container .main-content .labels-container ul li.added-labels{
+    color: lightgreen;
+    transition: 0.3s all;
+}
+.vocabulary .container .main-content .labels-container ul li.added-labels:hover{
+    color: crimson;
+}
+.labels-container ul::-webkit-scrollbar {
+    height: 0;
+}
+.vocabulary .container .main-content .words-container{
+    height: 600px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0px 10px;
+    padding-top: 30px;
+}
+.vocabulary .container .main-content .words-container .top-container{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    padding: 0px 5px;
+    background-color: #000;
+    margin-bottom: 2px;
+}
+.vocabulary .container .main-content .words-container .top-container .tools{
+    width: 80px;
+}
+.vocabulary .container .main-content .words-container .top-container .tools .icons{
+    height: 100%;
+    width: 40px;
+    cursor: pointer;
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.vocabulary .container .main-content .words-container .top-container h2{
+    color: #fff;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    flex: 1;
+}
+.vocabulary .container .main-content .words-container ul{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    max-height: 90%;
+    overflow-y: auto;
+}
+.vocabulary .container .main-content .words-container ul li{
+    font-size: 2rem;
+    font-weight: bold;
+    color: darkgray;
+    margin: 15px 0px;
+}
+.vocabulary .container .main-content .words-container ul li span{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 25px;
+    padding-right: 10px;    /*For label*/
+    color: #000;
+    cursor: pointer;
+}
+.vocabulary .container .main-content .words-container ul li .label-icons{
+    display: none;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+}
+.vocabulary .container .main-content .words-container ul li .label-icons path{
+    color: #000;
+}
+.vocabulary .container .main-content .words-container ul li span:hover~.label-icons,
+.vocabulary .container .main-content .words-container ul li .label-icons:hover{
+    display: inline;
+}

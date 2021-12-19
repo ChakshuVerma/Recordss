@@ -1,0 +1,238 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+html{
+  font-size: 10px;
+}
+body{
+  background-color: #000;
+}
+
+section{
+  width: 100%;
+  min-height: 100vh;
+}
+
+/*Scroll Bar*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(56, 51, 51)
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/* Navbar  */
+nav{
+  position: fixed;
+  top: 0;
+  background-color: rgb(43, 43, 43);
+  display: flex;
+  height: 80px;
+  width: 100%;
+  padding: 0px 20px;
+  z-index: 1;
+}
+nav .app-name{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+}
+nav .components{
+  width: 100%;
+}
+nav .components ul{
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav .components ul li{
+  margin-right: 2vw;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+nav .components ul li:hover{
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+
+/* Footerbar */
+footer{
+  background-color: rgb(43, 43, 43);
+  display: grid;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+}
+footer .text{
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* HomePage */
+.homepage .main-content{
+  width: 100%;
+}
+.homepage .main-content .poster{
+  width: 100%;
+  padding: 0px 20px;
+  padding-top: 100px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../../resources/HomePage_Poster.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+}
+.homepage .main-content .poster .center-div{
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.homepage .main-content .poster .center-div .text{
+  padding: 20px;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.homepage .main-content .poster .center-div .icons{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.homepage .main-content .poster .center-div .icons .poster-icon{
+  height: 70px;
+  width: 70px; 
+  margin-right: 15px; 
+  display: inline;
+  color: #fff;
+  margin: 20px;
+  cursor: pointer;
+}
+.homepage .main-content .poster .center-div .icons .poster-icon:hover{
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+.homepage .main-content .options{
+  width: 100%;
+  padding-top: 100px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  box-shadow: 0px 10px 20px #fff inset;
+}
+.homepage .main-content .options .center-div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.homepage .main-content .options .center-div li{
+  width: 100%;
+}
+.homepage .main-content .options .center-div .option-details{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.homepage .main-content .options .center-div .option-details .option-image img{
+  width: 500px;
+  height: 400px;
+  margin: 10px;
+  animation: bounce 1.2s alternate infinite;
+}
+@keyframes bounce {
+  0%{
+    transform: translateY(3px);
+  }
+  100%{
+    transform: translateY(-3px);
+  }
+}
+.homepage .main-content .options .center-div .option-details .option-about{
+  height: 100%;
+  max-width: 100%;
+  padding: 0px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.homepage .main-content .options .center-div .option-details .option-about .name{
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.homepage .main-content .options .center-div .option-details .option-about .description{
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+}
+
+
+/* Media Queries */
+@media (max-width: 950px){
+  .homepage .main-content .options .center-div .option-details{
+    flex-direction: column;
+  }
+  .homepage .main-content .options .center-div .option-details .option-about{
+    padding: 0px 20px;
+    order: 1;
+  }
+  .homepage .main-content .options .center-div .option-details .option-image{
+    order: 2;
+  }
+}
+@media (max-width: 515px){
+  html{
+    font-size: 8px;
+  }
+  .homepage .main-content .options .center-div .option-details .option-image img{
+    width: 90%;
+    height: 200px;
+  }
+}
+@media (max-width: 370px){
+  html{
+    font-size: 7px;
+  }
+  .homepage .main-content .options .center-div .option-details .option-image img{
+    width: 200px;
+    height: 150px;
+  }
+}
